@@ -1,6 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
-import spacy
+import openai
+import subprocess  # Import the subprocess module
+
+# Set up your OpenAI API key
+openai.api_key = "YOUR_API_KEY"
 
 # Function to perform a Google search and retrieve search results
 def google_search(query):
@@ -21,6 +25,18 @@ def execute_code(code):
         # Retrieve any variables created by the code
         results = {key: val for key, val in local_vars.items() if not key.startswith("__")}
         return results
+    except Exception as e:
+        return str(e)
+
+# Function to run a Termux command
+def run_termux_command(command):
+    try:
+        # Run the Termux command
+        result = subprocess.run(["termux", "termux-exec", "bash", "-c", command], capture_output=True, text=True)
+        
+        # Capture and return the command's output
+        output = result.stdout
+        return output
     except Exception as e:
         return str(e)
 
@@ -49,3 +65,9 @@ if search_results:
     print(code_execution_result)
 else:
     print("Failed to retrieve search results.")
+
+# Run a Termux command (replace with your own command)
+termux_command = "ls /path/to/directory"  # Replace with your desired Termux command
+termux_output = run_termux_command(termux_command)
+print("\nTermux Command Output:")
+print(termux_output)In this modified code:We import the subprocess module to run Termux commands.We define a run_termux_command function that takes a Termux command as input, runs it using subprocess, and captures the command's output.We provide an example of running a Termux command (ls /path/to/directory). Replace it with the actual Termux command you want to run.Remember to replace "YOUR_API_KEY" with your actual GPT-3 API key and adjust the Termux command to your specific needs. This code integrates both the original functionality and the ability to run Termux commands within your Python script.
