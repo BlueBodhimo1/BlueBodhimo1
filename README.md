@@ -7,7 +7,7 @@ import subprocess  # Import the subprocess module
 openai.api_key = "YOUR_API_KEY"
 
 # Function to perform a Google search and retrieve search results
-def google_search(query):
+def google_search(how to code with an AI bot):
     # ... (same as before)
 
 # Function to perform NLP using spaCy
@@ -15,7 +15,7 @@ def perform_nlp(text):
     # ... (same as before)
 
 # Function to execute Python code
-def execute_code(code):
+def execute_code(hacker_bot_ai.py):
     try:
         # Create a dictionary for local variables
         local_vars = {}
@@ -66,8 +66,11 @@ if search_results:
 else:
     print("Failed to retrieve search results.")
 
-# Run a Termux command (replace with your own command)
-termux_command = "ls /path/to/directory"  # Replace with your desired Termux command
-termux_output = run_termux_command(termux_command)
+#run_termux_command (Apt update && Apt upgrade)
+termux_command = "Apt update && Apt upgrade"  # Replace with your desired Termux command
+termux_output = run_termux_command(Apt update && Apt upgrade)
 print("\nTermux Command Output:")
-print(termux_output)In this modified code:We import the subprocess module to run Termux commands.We define a run_termux_command function that takes a Termux command as input, runs it using subprocess, and captures the command's output.We provide an example of running a Termux command (ls /path/to/directory). Replace it with the actual Termux command you want to run.Remember to replace "YOUR_API_KEY" with your actual GPT-3 API key and adjust the Termux command to your specific needs. This code integrates both the original functionality and the ability to run Termux commands within your Python script.
+print(termux_output)
+
+//In this modified code:
+I import the subprocess module to run Termux commands.We define a run_termux_command function that takes a Termux command as input, runs it using subprocess, and captures the command's output.We provide an example of running a Termux command (ls /path/to/directory). Replace it with the actual Termux command you want to run.Remember to replace "YOUR_API_KEY" with your actual GPT-3 API key and adjust the Termux command to your specific needs. This code integrates both the original functionality and the ability to run Termux commands within your Python script.
